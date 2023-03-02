@@ -1,1 +1,0 @@
-oprint('hello world')
