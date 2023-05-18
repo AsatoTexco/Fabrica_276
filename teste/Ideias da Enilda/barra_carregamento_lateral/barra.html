@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+
+
+}
+.barra{
+
+    width: 100%;
+    border-radius: 15px;
+    height: 100px;
+    background: linear-gradient(90deg,red,yellow,green);
+    border-style: solid 1px;
+    
+
+}
+
+.barraN{
+
+    z-index: 4;
+    border-radius: 0 15px 15px 0;
+    position: absolute;
+    right: 0;
+    float: right;
+    width: 0;
+    height: 100px;
+    background-color: white;
+    transition: all 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text_porcent{
+    font-size: 50px;
+}
+
+
+</style>
+
+</head>
+<body>
+    
+<input type="number" id="porcent" placeholder="Insira sua porcentagem de presença" max="100"onchange="mostra()">
+<input type="submit" value="Enviar" onclick="mostra()">
+<div class="container">
+
+    <div class="barra"></div>
+
+    <div id = barraN class="barraN">
+        <text class="text_porcent" id="txtrect" x="5" y="35" font-family="Verdana" font-size="11" fill="white"></text>
+    </div>
+
+
+
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

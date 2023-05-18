@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* red 50% blue 23% green 17% orange 10% */
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.pizza{
+
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg,#0000 0 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.space{
+    transition: all 1s;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="pizza" id="pizza">
+        <div class="space"><h1 id="porcentagemA">0%</h1></div>
+    </div>
+    <input id="porcent" onchange="calc()" type="text"  max="100" placeholder="Insira  a porcentagem desejada">
+   <br> <input type="reset" onclick="calc()" value="Enviar">
+<script src="calculoPorcent.js"></script>
+</body>
+</html>

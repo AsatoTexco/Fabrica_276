@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(73, 148, 124);
+
+}
+#login{
+
+    display: flex;
+    flex-direction: column;
+   
+    
+    background-color: white;
+
+    
+
+    border-radius: 15px; 
+    transform-style: preserve-3d;
+    transition: 1.5s linear;
+    
+}
+
+
+#frente{
+ 
+    flex-direction: column;
+    background-color: white;
+    padding: 60px 50px;
+    border-radius: 15px;
+    position: absolute;
+    
+    transition: 1s;
+    height: 300px;
+
+}
+.back{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 60px 50px;
+    border-radius: 15px;
+    align-items: center;
+    height: 300px;
+    transform: rotateY(180deg) rotateX(360deg) translateZ(1px);
+
+}
+h1{
+
+    text-align: center;
+    
+}
+
+.btn_entrar{
+
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    bottom: 45px;
+    position: absolute;
+
+
+}
+.btn{
+    
+    width: 0px;
+    background-color: red;
+    outline: none;
+    border: none;
+
+
+}
+.btn_criar{
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+    bottom: 15px;
+    position: absolute;
+    
+    
+
+}
+.area_btn{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.text{
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    padding: 8px;
+}
+.content{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+
+}
+#sombra{
+
+    
+    height: 110px;
+    width: 285px;
+    background-color: black;
+    border-radius:15px ;
+    transition: 1s all linear;
+    
+  
+
+    backdrop-filter: blur(25px);
+    transform: rotateY(180deg) rotateX(360deg) translateZ(1px);
+    
+}
+
+.area_sombra{
+    position: absolute;
+    bottom: 100px;
+    transform-style: preserve-3d;
+
+
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="login" id="login">
+    
+    <div class="frente" id="frente">
+
+        <!-- <button class="btn">☀</button> -->
+
+
+        <h1>Login</h1>
+    
+        <div class="content">
+            
+            <input type="text" class="text" placeholder="Senha" name="senha" id="">
+            <input type="text" class="text" placeholder="Confirmar Senha" name="senha" id="">
+
+            <button class="btn_entrar">Entrar</button>
+            <div class="area_btn">
+
+                <button class="btn_criar" onclick="virar()">Criar conta</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="back">
+
+        <!-- <button class="btn">☀</button> -->
+        <h1>Cadastrar</h1>
+    
+        <div class="content">
+            
+            
+            <input type="text" class="text" placeholder="E-mail" name="email" id="">
+            <input type="text" class="text" placeholder="Senha" name="senha" id="">
+            <input type="text" class="text" placeholder="Confirmar Senha" name="senha" id="">
+
+            <button class="btn_entrar">Criar</button>
+            <div class="area_btn">
+
+                <button class="btn_criar" onclick="desvirar()">Entrar</button>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="area_sombra">
+
+    <div id="sombra"></div> 
+
+</div>
+
+<script>
+
+
+const card = document.getElementById("login");
+const sombra = document.getElementById("sombra");
+
+function virar(){
+    
+    card.style.transform = "rotateY(180deg) rotateX(360deg) translateZ(1px)"
+    sombra.style.transform = "rotateY(0deg) rotateX(0deg) translateZ(1px)"
+}
+
+function desvirar(){
+
+    card.style.transform = "rotateY(0deg)"
+    
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+
+margin: 0;
+padding: 0;
+
+}
+
+body{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.area{
+
+    height: 500px;
+    width: 100px;
+    
+    
+
+}
+.bloco{
+    height: 0%;
+    width: 100px;
+    background-color: blue;
+    z-index: 0;
+    position: absolute;
+    display: block;
+    transition: all 10s;
+    
+    
+
+
+}
+
+
+.img_bloco{
+
+    z-index: 3;
+    /* background-color: red; */
+    position: absolute;
+    display: block;
+   
+
+
+}
+
+</style>
+
+</head>
+<body>
+
+    <div class="area">
+        <div class="bloco" id="bloco"></div>
+        <img class="img_bloco" src="teste2.png">
+    </div>
+    <button id="bot" onclick="carregar()">Carregar</button>
+<script>
+
+function carregar(){
+    
+    document.getElementById("bloco").style.height = "500px   "
+    document.getElementById("bot").setAttribute("onclick","descarga()");
+
+}
+function descarga(){
+
+    document.getElementById("bloco").style.height = "0px"
+    document.getElementById("bot").setAttribute("onclick","carregar()");
+}
+
+</script>
+</body>
+</html>

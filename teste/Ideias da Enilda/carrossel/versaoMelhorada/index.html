@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+
+    margin: 0;
+    padding: 0;
+
+
+}
+.carrossel{
+
+    height: 200px;
+    width: 100vw;
+    background-color: aliceblue;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.area_seta{
+
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    z-index: 99;
+    cursor: pointer;
+
+}
+
+.seta_right{
+
+    right: 0;
+}
+ 
+.seta_left{
+
+    left: 0;
+    position: absolute;
+     
+}
+.img_slide{
+
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    right: 0;
+    transition: 1s;
+    
+    
+}
+
+.img_slideSemTransition{
+
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    right: 0;
+    transition: 0;
+    
+}
+
+ 
+.carrossel_slide{
+
+    overflow-x: hidden;
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    position: absolute;
+
+}
+.seta{
+
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    pointer-events: none;
+
+
+}
+span{
+
+    pointer-events: none;
+
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="carrossel">
+        <div class="area_seta seta_left" onclick="back()">
+            <span class="seta" id="back" ><</span>
+        </div>
+        <div class="area_seta seta_right" onclick="next()">
+            <span class="seta" id="next" >></span>
+        </div>
+
+        <div class="carrossel_slide">
+
+            <img class="img_slide" id="teste1"  src="download.jpg" alt="">
+            <img class="img_slide" id="teste2" src="https://api.lorem.space/image/face?w=450&amp;amp;amp;amp;h=660" alt="">
+            <img class="img_slide" id="teste3" src="https://static.vecteezy.com/ti/fotos-gratis/t2/6671766-fantastica-lua-magica-luz-e-agua-barco-com-arvore-papel-de-parede-gratis-foto.jpg" alt="">
+            <img class="img_slide" id="teste4" src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg" alt="">
+            <img class="img_slide" id="teste5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZgl0C7sX4hzjRVnPYOIEswxMXNb6tKXRBtWchxhT61ohzEzkALINGreOhmTtdG-LPXbE&usqp=CAU" alt="">
+            <img class="img_slide" id="teste6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwaz3LTEJ5JvLBGNnii9uvoM9GSn98bJ4p2lfD_JAFsI77cKYa_aLuEDGremnN-J2CInA&usqp=CAU" alt="">
+            <img class="img_slide" id="teste7" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoYII_eDVmo72g0luM6-iDbgGbOYmSwUtf0g&usqp=CAU" alt="">
+            <img class="img_slide" id="teste8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWYenGebfzJCuwiR4WdjzTzI7BdavwbbeHA&usqp=CAU" alt="">
+            <img class="img_slide" id="teste9" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGeDdl0s9I-uILsDfPFPERCYVU855Mg6DKvg&usqp=CAU" alt="">
+            <img class="img_slide" id="teste9" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLsVGov5C1gQgknbN7IKQJ5r_Qaw1RBDifLw&usqp=CAU" alt="">
+
+        </div>
+
+
+
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
