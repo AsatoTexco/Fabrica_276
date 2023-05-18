@@ -33,4 +33,4 @@ print(f"Raiz quadrada de {n3} é {raiz(n3)}")
 n4 = float(input("número ao quadrado: "))
 print(f"{n4} ao quadrado é {radi(n4)}")
 
-testesssss = 2
+testesssss = 344555
